@@ -1,8 +1,6 @@
 from parser import load_data
 from greedy_solver import GreedySolver
 from graph_engine import GraphEngine
-from optimizer import Optimizer
-
 
 def main():
 
@@ -15,8 +13,26 @@ def main():
     schedule = greedy.solve(
         courses,
         rooms,
-        timeslots
+        timeslots,
+        groups
     )
+
+    # Create GraphEngine first
+    graph_engine = GraphEngine()
+
+    graph, conflicts = graph_engine.build_graph(
+        courses,
+        groups
+    )
+
+    print("\n--- CONFLICT REPORT ---\n")
+
+    for conflict in conflicts:
+        print(
+            f"{conflict['type']}: "
+            f"{conflict['class1']} <-> {conflict['class2']} "
+            f"({conflict['reason']})"
+        )
 
     for cid, result in schedule.items():
 
@@ -32,19 +48,11 @@ def main():
 
         else:
 
-            print(
-                f"Unscheduled {cid}"
-            )
+            print(f"Unscheduled {cid}")
 
     print("\n--- GRAPH COLORING ---\n")
 
-    graph_engine = GraphEngine()
-
-    graph, conflicts = graph_engine.build_graph(
-        courses,
-        groups
-    )
-
+    # No need to build the graph again
     colors = graph_engine.welsh_powell(graph)
 
     for cls, color in colors.items():
@@ -52,19 +60,7 @@ def main():
             f"{cls} -> Time Slot Group {color}"
         )
 
-    print("\n--- DP ROOM OPTIMIZATION ---\n")
 
-    optimizer = Optimizer()
-
-    cost, allocation = optimizer.assign_rooms(
-        courses,
-        rooms
-    )
-
-    print("Total wasted seats:", cost)
-
-    for c, r in allocation:
-        print(c, "->", r)
 
 
 if __name__ == "__main__":

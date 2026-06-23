@@ -19,149 +19,202 @@
       "id": "MSC04",
       "students": 28,
       "professor": "ProfA"
+    },
+    {
+      "id": "MSC05",
+      "students": 40,
+      "professor": "ProfD"
+    },
+    {
+      "id": "MSC06",
+      "students": 30,
+      "professor": "ProfE"
+    },
+    {
+      "id": "MSC07",
+      "students": 25,
+      "professor": "ProfF"
+    },
+    {
+      "id": "MSC08",
+      "students": 35,
+      "professor": "ProfG"
+    },
+    {
+      "id": "MSC09",
+      "students": 42,
+      "professor": "ProfH"
+    },
+    {
+      "id": "MSC10",
+      "students": 18,
+      "professor": "ProfI"
     }
   ],
 
   "student_groups": {
-    "MSC_2025": ["Msc101", "MSC02"],
-    "DS_2025": ["MSC03", "MSC04"]
+    "MSC_2025": [
+      "Msc101",
+      "MSC02",
+      "MSC05"
+    ],
+
+    "DS_2025": [
+      "MSC03",
+      "MSC04",
+      "MSC06"
+    ],
+
+    "AI_2025": [
+      "MSC07",
+      "MSC08"
+    ],
+
+    "SE_2025": [
+      "MSC09",
+      "MSC10"
+    ]
   },
 
   "rooms": [
 
-    {
-      "id": "3",
-      "capacity": 35,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false
-      }
-    },
-
-    {
-      "id": "6",
-      "capacity": 50,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": false,
-        "Friday": false,
-        "Saturday": false
-      }
-    },
-
-    {
-      "id": "7",
-      "capacity": 36,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
-
-    {
-      "id": "8",
-      "capacity": 36,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
-
-    {
-      "id": "9",
-      "capacity": 23,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
-
-    {
-      "id": "10",
-      "capacity": 34,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
-
-    {
-      "id": "11",
-      "capacity": 30,
-      "availability":
-      {
-        "Monday": false,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": false,
-        "Friday": true,
-        "Saturday": false
-      }
-    },
-
-    {
-      "id": "12",
-      "capacity": 36,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": false,
-        "Wednesday": false,
-        "Thursday": true,
-        "Friday": false,
-        "Saturday": false
-      }
-    },
-
-    {
-      "id": "MacPool",
-      "capacity": 25,
-      "availability":
-      {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": false,
-        "Saturday": false
-      },
-
-      "restricted_slots":
-      {
-        "Tuesday": ["09:00","10:45"],
-        "Wednesday": ["09:00","10:45"],
-        "Thursday": ["09:00","10:45"]
-      }
+  {
+    "id": "3",
+    "capacity": 35,
+    "availability": {
+      "Monday": true,
+      "Tuesday": false,
+      "Wednesday": false,
+      "Thursday": false,
+      "Friday": false,
+      "Saturday": false
     }
-  ],
+  },
+
+  {
+    "id": "6",
+    "capacity": 50,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": false,
+      "Friday": false,
+      "Saturday": false
+    }
+  },
+
+  {
+    "id": "7",
+    "capacity": 36,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    }
+  },
+
+  {
+    "id": "8",
+    "capacity": 36,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    }
+  },
+
+  {
+    "id": "9",
+    "capacity": 23,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    }
+  },
+
+  {
+    "id": "10",
+    "capacity": 34,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": true,
+      "Saturday": true
+    }
+  },
+
+  {
+    "id": "11",
+    "capacity": 30,
+    "availability": {
+      "Monday": false,
+      "Tuesday": false,
+      "Wednesday": false,
+      "Thursday": false,
+      "Friday": true,
+      "Saturday": false
+    }
+  },
+
+  {
+    "id": "12",
+    "capacity": 36,
+    "availability": {
+      "Monday": true,
+      "Tuesday": false,
+      "Wednesday": false,
+      "Thursday": true,
+      "Friday": false,
+      "Saturday": false
+    }
+  },
+
+  {
+    "id": "Auditorium",
+    "capacity": 60,
+    "availability": {
+      "Monday": false,
+      "Tuesday": false,
+      "Wednesday": true,
+      "Thursday": false,
+      "Friday": false,
+      "Saturday": false
+    }
+  },
+
+  {
+    "id": "MacPool",
+    "capacity": 25,
+    "availability": {
+      "Monday": true,
+      "Tuesday": true,
+      "Wednesday": true,
+      "Thursday": true,
+      "Friday": false,
+      "Saturday": false
+    },
+
+    "restricted_slots": {
+      "Tuesday": ["09:00", "10:45"],
+      "Wednesday": ["09:00", "10:45", "13:15"],
+      "Thursday": ["09:00", "10:45"]
+    }
+  }
+
+],
 
   "professors": [
     {
@@ -175,6 +228,7 @@
         "Saturday": true
       }
     },
+
     {
       "id": "ProfB",
       "availability": {
@@ -186,6 +240,7 @@
         "Saturday": true
       }
     },
+
     {
       "id": "ProfC",
       "availability": {
@@ -197,6 +252,7 @@
         "Saturday": true
       }
     },
+
     {
       "id": "ProfD",
       "availability": {
@@ -207,11 +263,70 @@
         "Friday": true,
         "Saturday": true
       }
+    },
+
+    {
+      "id": "ProfE",
+      "availability": {
+        "Monday": true,
+        "Tuesday": true,
+        "Wednesday": true,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": true
+      }
+    },
+
+    {
+      "id": "ProfF",
+      "availability": {
+        "Monday": true,
+        "Tuesday": false,
+        "Wednesday": true,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": false
+      }
+    },
+
+    {
+      "id": "ProfG",
+      "availability": {
+        "Monday": true,
+        "Tuesday": true,
+        "Wednesday": true,
+        "Thursday": false,
+        "Friday": true,
+        "Saturday": true
+      }
+    },
+
+    {
+      "id": "ProfH",
+      "availability": {
+        "Monday": false,
+        "Tuesday": true,
+        "Wednesday": true,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": true
+      }
+    },
+
+    {
+      "id": "ProfI",
+      "availability": {
+        "Monday": true,
+        "Tuesday": true,
+        "Wednesday": false,
+        "Thursday": true,
+        "Friday": true,
+        "Saturday": true
+      }
     }
   ],
 
-  "timeslots":
-  [
+  "timeslots": [
     "Monday-09:00",
     "Monday-10:45",
     "Monday-13:15",
@@ -232,5 +347,4 @@
     "Friday-10:45",
     "Friday-13:15"
   ]
-  
 }

@@ -8,9 +8,6 @@ class GraphEngine:
         graph = defaultdict(set)
         conflict_report = []
 
-        # --------------------------
-        # Student Group Conflicts
-        # --------------------------
 
         for group, class_list in student_groups.items():
 
@@ -32,9 +29,6 @@ class GraphEngine:
                         }
                     )
 
-        # --------------------------
-        # Professor Conflicts
-        # --------------------------
 
         professor_map = defaultdict(list)
 
@@ -65,9 +59,7 @@ class GraphEngine:
 
         return graph, conflict_report
 
-    # ---------------------------------
-    # Welsh Powell Coloring
-    # ---------------------------------
+
 
     def welsh_powell(self, graph):
 
