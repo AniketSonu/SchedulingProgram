@@ -1,18 +1,24 @@
 class Course:
 
-    def __init__(self,
-                 cid,
-                 students,
-                 professor,
-                 professor_availability=None):
+    def __init__(
+            self,
+            cid,
+            students,
+            professor,
+            professor_availability,
+            professor_preferences=None):
 
         self.id = cid
         self.students = students
         self.professor = professor
+
         self.professor_availability = (
-            professor_availability or {}
+            professor_availability
         )
 
+        self.professor_preferences = (
+            professor_preferences or {}
+        )
 
 class Room:
 

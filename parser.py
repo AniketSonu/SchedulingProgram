@@ -10,27 +10,42 @@ def load_data():
     professor_map = {}
 
     for prof in data["professors"]:
-        professor_map[prof["id"]] = (
-            prof["availability"]
-        )
-
+        professor_map[prof["id"]] = {
+            "availability": prof["availability"],
+            "preferences": prof.get(
+                "preferences",
+                {}
+            )
+        }
 
     courses = []
 
     for c in data["classes"]:
+        prof_info = professor_map.get(
+            c["professor"],
+            {}
+        )
+
         courses.append(
 
             Course(
                 cid=c["id"],
                 students=c["students"],
                 professor=c["professor"],
+
                 professor_availability=
-                professor_map.get(
-                    c["professor"], {}
+                prof_info.get(
+                    "availability",
+                    {}
+                ),
+
+                professor_preferences=
+                prof_info.get(
+                    "preferences",
+                    {}
                 )
             )
         )
-
     rooms = []
 
     for r in data["rooms"]:

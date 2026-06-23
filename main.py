@@ -25,14 +25,7 @@ def main():
         groups
     )
 
-    print("\n--- CONFLICT REPORT ---\n")
 
-    for conflict in conflicts:
-        print(
-            f"{conflict['type']}: "
-            f"{conflict['class1']} <-> {conflict['class2']} "
-            f"({conflict['reason']})"
-        )
 
     for cid, result in schedule.items():
 
@@ -60,7 +53,14 @@ def main():
             f"{cls} -> Time Slot Group {color}"
         )
 
+    print("\n--- CONFLICT REPORT ---\n")
 
+    for conflict in conflicts:
+        print(
+            f"{conflict['type']}: "
+            f"{conflict['class1']} <-> {conflict['class2']} "
+            f"({conflict['reason']})"
+        )
 
 
 if __name__ == "__main__":

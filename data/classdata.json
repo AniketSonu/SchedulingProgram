@@ -218,28 +218,60 @@
 
   "professors": [
     {
-      "id": "ProfA",
-      "availability": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
+  "id": "ProfA",
+  "availability": {
+    "Monday": true,
+    "Tuesday": true,
+    "Wednesday": true,
+    "Thursday": true,
+    "Friday": true,
+    "Saturday": false
+  },
+
+  "preferences": {
+    "preferred_days": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
+
+    "preferred_times": [
+      "09:00",
+      "10:45"
+    ],
+
+    "max_classes_per_day": 2,
+
+    "avoid_consecutive": true
+  }
+},
 
     {
-      "id": "ProfB",
-      "availability": {
-        "Monday": true,
-        "Tuesday": true,
-        "Wednesday": true,
-        "Thursday": true,
-        "Friday": true,
-        "Saturday": true
-      }
-    },
+  "id": "ProfB",
+  "availability": {
+    "Monday": true,
+    "Tuesday": false,
+    "Wednesday": true,
+    "Thursday": true,
+    "Friday": true,
+    "Saturday": false
+  },
+
+  "preferences": {
+    "preferred_days": [
+      "Tuesday",
+      "Thursday"
+    ],
+
+    "preferred_times": [
+      "13:15"
+    ],
+
+    "max_classes_per_day": 1,
+
+    "avoid_consecutive": false
+  }
+},
 
     {
       "id": "ProfC",
