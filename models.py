@@ -1,3 +1,4 @@
+
 class Course:
 
     def __init__(

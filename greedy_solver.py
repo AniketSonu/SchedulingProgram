@@ -1,3 +1,4 @@
+
 class GreedySolver:
 
 
@@ -10,7 +11,7 @@ class GreedySolver:
         if not room.availability.get(day, False):
             return False
 
-        # Check restricted slots (MacPool etc.)
+
         if hasattr(room, "restricted_slots"):
 
             if day in room.restricted_slots:
@@ -61,7 +62,7 @@ class GreedySolver:
 
             placed = False
 
-            # Rotate slots to spread classes
+
             for i in range(len(timeslots)):
 
                 slot = timeslots[
